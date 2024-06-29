@@ -1,0 +1,59 @@
+{
+  "name": "@seiberspace/iterdate",
+  "version": "0.1.0",
+  "description": "Date iterators.",
+  "keywords": [
+    "date",
+    "iterator",
+    "hours",
+    "days",
+    "months"
+  ],
+  "homepage": "https://github.com/IUnknown68/iterdate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IUnknown68/iterdate.git"
+  },
+  "author": "Arne Seib",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/iterdate.js",
+  "module": "dist/iterdate.mjs",
+  "types": "dist/iterdate.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/iterdate.d.ts",
+        "default": "./dist/iterdate.mjs"
+      },
+      "require": {
+        "types": "./dist/iterdate.d.ts",
+        "default": "./dist/iterdate.js"
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "test": "jest",
+    "rollup": "rollup -c rollup.config.mjs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-babel": "^0.2.2",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-jest": "^27.9.0",
+    "jest": "^29.7.0",
+    "jest-extended": "^4.0.2",
+    "rollup": "^4.14.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "typescript": "^5.4.4"
+  }
+}
