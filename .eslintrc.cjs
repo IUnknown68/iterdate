@@ -1,8 +1,4 @@
 module.exports = {
-  // https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
-  // This option interrupts the configuration hierarchy at this file
-  // Remove this if you have an higher level ESLint config file (it usually happens
-  // into a monorepos)
   root: true,
 
   parserOptions: {
@@ -14,7 +10,12 @@ module.exports = {
     node: true,
   },
 
-  // Rules order is important, please avoid shuffling them
+  ignorePatterns: [
+    'docs',
+    'dist',
+    'coverage',
+  ],
+
   extends: [
     'airbnb-base',
     'airbnb-babel',
@@ -52,7 +53,6 @@ module.exports = {
 
     'prefer-promise-reject-errors': 'off',
 
-    // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars, no-empty */
 import 'jest-extended';
 
 import {
@@ -35,7 +36,6 @@ describe('make', () => {
     const result = makeYmdHmsDate(testDate);
     expect(result.valueOf()).toEqual((new Date(2023, 9, 11, 4, 1, 51, 0)).valueOf());
   });
-
 
   it('YmdHmDate returns an array [y,m,d,h,m,0,0]', () => {
     const result = makeYmdHmDate(testDate);
