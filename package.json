@@ -21,15 +21,12 @@
   ],
   "main": "dist/iterdate.js",
   "module": "dist/iterdate.mjs",
-  "types": "dist/iterdate.d.ts",
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/iterdate.d.ts",
         "default": "./dist/iterdate.mjs"
       },
       "require": {
-        "types": "./dist/iterdate.d.ts",
         "default": "./dist/iterdate.js"
       }
     }
