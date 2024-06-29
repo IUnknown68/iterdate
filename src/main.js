@@ -1,15 +1,3 @@
-/*
-export enum DateArrayPrecision {
-  Year = 1,
-  Month = 2,
-  Day = 3,
-  Hour = 4,
-  Minute = 5,
-  Second = 6,
-  Millisecond = 7,
-};
-*/
-
 const noDate = [0, 0, 1, 0, 0, 0, 0];
 
 //------------------------------------------------------------------------------

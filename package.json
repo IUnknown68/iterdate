@@ -1,6 +1,6 @@
 {
   "name": "@seiberspace/iterdate",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Date iterators.",
   "keywords": [
     "date",
@@ -38,7 +38,11 @@
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
     "test": "jest",
-    "rollup": "rollup -c rollup.config.mjs"
+    "rollup": "rollup -c rollup.config.mjs",
+    "deploy:patch": "./deploy.sh patch",
+    "deploy:minor": "./deploy.sh minor",
+    "deploy:major": "./deploy.sh major",
+    "deploy": "./deploy.sh patch"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",

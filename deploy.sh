@@ -7,9 +7,9 @@ if [[ ! -z $CHANGES ]]; then
   echo "Repository has changes:"
   echo $CHANGES
   exit 1
-else
-  echo "OK."
 fi
+
+echo "OK."
 
 # Build
 yarn lint && yarn test && yarn rollup
