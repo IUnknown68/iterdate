@@ -1,5 +1,5 @@
 const noDate = [0, 0, 1, 0, 0, 0, 0];
-function date2Array(date, precision = 7) {
+function date2Array(date, precision = 7, partial = false) {
   const ar = [
     date.getFullYear(),
     date.getMonth(),
@@ -9,10 +9,11 @@ function date2Array(date, precision = 7) {
     date.getSeconds(),
     date.getMilliseconds()
   ];
-  return [
-    ...ar.slice(0, precision),
-    ...noDate.slice(precision)
-  ];
+  const ret = ar.slice(0, precision);
+  if (!partial) {
+    ret.push(...noDate.slice(precision));
+  }
+  return ret;
 }
 function makeYmdHmsDate(date) {
   return new Date(...date2Array(date, 6));
